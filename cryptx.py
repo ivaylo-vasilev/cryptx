@@ -1,16 +1,16 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
 import sys
 import os
 import argparse
 from cryptography.fernet import Fernet
 
-parser = argparse.ArgumentParser(description="* CryptX - Encryption tool *")
-parser.add_argument("-e", "--encrypt", metavar="PATH", help="Encrypt file|directory")
-parser.add_argument("-d", "--decrypt", metavar="PATH", help="Decrypt file|directory")
-parser.add_argument("-k", "--key", metavar="KEY", help="Insert encryption/decryption key")
-parser.add_argument("-g", "--generate", metavar="KEY", help="Generate encryption key")
-parser.add_argument("--version", action="store_true", help="Print program version and exit")
+parser = argparse.ArgumentParser(description="* CryptX - Encryption tool *", epilog="(c)Ivaylo Vasilev")
+parser.add_argument("-e", "--encrypt", metavar="PATH", help="encrypt file|directory")
+parser.add_argument("-d", "--decrypt", metavar="PATH", help="decrypt file|directory")
+parser.add_argument("-k", "--key", metavar="KEY", help="insert encryption/decryption key")
+parser.add_argument("-g", "--generate", metavar="KEY", help="generate encryption key")
+parser.add_argument("--version", action="version", version="CryptX 2.2", help="show program version and exit")
 args = parser.parse_args()
 
 extensions = [".jpg", ".jpeg", ".png", ".bmp", ".gif", ".txt", ".rtf", ".doc", ".docx", ".odt", \
@@ -19,8 +19,6 @@ extensions = [".jpg", ".jpeg", ".png", ".bmp", ".gif", ".txt", ".rtf", ".doc", "
 
 
 def main():
-    if args.version:
-        sys.exit("CryptX 2.1")
     banner()
     if len(sys.argv) == 1:
         usage()
