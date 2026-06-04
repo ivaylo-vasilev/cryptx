@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
 
+##############################
+# CryptX #
+# ====== #
+# CLI program for files encryption and decryption
+# Copyright (c)2025 Ivaylo Vasilev. Released under the MIT License; see LICENSE for details.
+# Author: Ivaylo Vasilev
+##############################
+
 import sys
 import os
 import argparse

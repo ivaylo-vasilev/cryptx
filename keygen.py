@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
 
+##############################
+# CryptX Key Generator #
+# ==================== #
+# Tool to generate Fernet security keys
+# Copyright (c)2025 Ivaylo Vasilev. Released under the MIT License; see LICENSE for details.
+# Author: Ivaylo Vasilev
+##############################
+
 import sys
 import argparse
 from cryptography.fernet import Fernet
